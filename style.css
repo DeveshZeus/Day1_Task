@@ -1,0 +1,61 @@
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    width: 100vh;
+    padding-left: 12%;
+}
+.box{
+    width: 457px;
+    height: 138px;
+    position: relative;
+    margin:4px;
+}
+
+.profile-pic{
+    width: 130px;
+    height: 130px;
+    float:left;
+    margin-right: 14px;
+}
+.username{
+    font-size: 20px;
+    font-family: "Roboto";
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+.intro{
+    font-size: 20px;
+    font-family: "Roboto";
+}
+.icon-box{
+    display: inline-block;
+    margin-top: 24px;
+}
+.written{
+    display:inline;
+    position: absolute;
+    align-items: center;
+    margin-top:14px;
+}
+.icon1{
+    width: 20px;
+    height:20px;
+    float:left;
+
+}
+.icon{
+    display: inline-block;
+    vertical-align:bottom;
+    margin-right: 14px;
+}
+.dig{
+    display:inline;
+    font-family: "Roboto";
+    color: #858991;
+    font-size: 15px;
+    font-weight: medium;
+    margin-right: 24px;
+}
+
