@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Quantum</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <img src="./icons/logo used in header.svg" alt="Logo">
+        </nav>
+        <div class="separator"></div>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <div class="separator"></div>
+            <form action="#">
+                <div class="form-heading">
+                    <img src="./icons/back.svg" alt="backbutton">
+                    Log in with Quantum
+                </div>
+    
+                <div class="form-school-type">
+                    <input type="radio" name="school-type" id="district-school">
+                    <label for="district-school">
+                        District
+                    </label>
+                    
+                    <input type="radio" name="school-type" id="independent-school">
+                    <label for="independent-school">
+                        Independent School
+                    </label>
+                </div>
+    
+                <div class="form-state">
+                    <label for="state">
+                        <span class="input-span-style">
+                            State*
+                        </span>
+
+                        <input list="states" name="state" id="state" class="remove-styles input-style " >
+                        <datalist id="states">
+                            <option value="Alabama">
+                            <option value="California">
+                            <option value="New York">
+                        </datalist>
+                    </label>
+                </div>
+    
+                <div class="form-district">
+                    <label for="district">
+                        <span class="input-span-style">
+                            District*
+                        </span>
+
+                        <input list="districts" name="district" id="district" class="remove-styles input-style " >
+                        <datalist id="districts">
+                            <option value="Alabama School District">
+                            <option value="California School District">
+                            <option value="New York School District">
+                        </datalist>
+                    </label>
+                </div>
+    
+                <div class="form-username">
+                    <input type="text" id="username" class="remove-styles input-style" placeholder="Username/Email ID*">
+                    <p class="p-styles">
+                        <a href="#" class="p-a-styles">
+                            FORGOT USERNAME?
+                        </a>
+                    </p>
+                </div>
+    
+                <div class="form-password">
+                    <input type="text" id="password" class="remove-styles input-style" placeholder="Password*">
+                    <img src="./icons/preview.svg" alt="preview-password">
+                    <p class="p-styles">
+                        <a href="#" class="p-a-styles">
+                            FORGOT PASSWORD?
+                        </a>
+                    </p>
+                </div>
+    
+                <div class="form-checkbox">
+                    <input type="checkbox" name="remember-checkbox" id="checkbox">
+                    <label for="checkbox">
+                        Remember Me
+                    </label>
+                </div>
+    
+                <div class="form-submit-btn">
+                    <button type="submit">
+                        LOG IN
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="info">
+            <span class="about">
+                <a href="#" class="p-a-styles">
+                    About
+                </a>
+            </span>
+            <span class="contact">
+                <a href="#" class="p-a-styles">
+                    Contact Us
+                </a>
+            </span>
+        </div>
+
+        <div class="company-info">
+            <img src="./icons/logo used in footer.svg" alt="logo" class="bottom-logo">
+            <span class="copyright">
+                Copyright &#169; 2020-2021
+            </span>
+            <span class="company-name">
+                Zeus Systems Pvt. Ltd.
+            </span>
+            <span class="rights">
+                All rights reserved
+            </span>
+        </div>
+    </footer>
+</body>
+</html>

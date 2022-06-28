@@ -1,0 +1,111 @@
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    grid-auto-rows: minmax(100px, 1fr);
+    grid-gap: 3px;
+} 
+.header{
+    border: 1px solid black;
+    background: #CF9FFF;
+    padding:auto;
+    grid-column: 1/-1;
+    grid-auto-rows: 1/2;
+}
+.siderbar{
+    border: 1px solid black;
+    background: linear-gradient(to bottom, #37CAC2, #2DAAA4);
+    grid-column: 1/3;
+    grid-row: 2/6;
+}
+.content1{
+    border: 1px solid black;
+    background: linear-gradient(to top left, #32CBE3, #576BE4);
+    grid-column: 3/-1;
+    grid-row:2/4;
+}
+.content2{
+    border: 1px solid black;
+    background: linear-gradient(to top left, #32CBE3, #576BE4);
+    grid-column: 3/6;
+    grid-row: 4/6;
+
+}
+.content3{
+    border: 1px solid black;
+    background: linear-gradient(to top left, #32CBE3, #576BE4);
+    grid-column: 6/-1;
+    grid-row: 4/6;
+
+ 
+}
+.footer{
+    border: 1px solid black;
+    background: #CF9FFF;
+    grid-column: 1/-1;
+    grid-auto-rows: minmax(100px, 1fr);
+
+}
+.text-center{
+    text-align: center;
+    color: white;
+    font-style: bold;
+    font-family: "Roboto";
+}
+
+@media (max-width: 40em){
+    .container{
+        display: grid;
+        height: 100vh;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-auto-rows: minmax(100px, 1fr); 
+        grid-gap: 3px;
+    }
+    .header{
+        border: 1px solid black;
+        background: #CF9FFF;
+        padding:auto;
+        grid-column: 1/-1;
+        grid-row: span 1;
+    }
+    .siderbar{
+        border: 1px solid black;
+        background: linear-gradient(to bottom, #37CAC2, #2DAAA4);
+        grid-column: 1/-1;
+        grid-row: span 1;
+    }
+    .content1{
+        border: 1px solid black;
+        background: linear-gradient(to top left, #32CBE3, #576BE4);
+        grid-column: 1/-1;
+        grid-row: span 2;
+    }
+    .content2{
+        border: 1px solid black;
+        background: linear-gradient(to top left, #32CBE3, #576BE4);
+        grid-column: 1/-1;
+        grid-row: span 2;
+    
+    }
+    .content3{
+        border: 1px solid black;
+        background: linear-gradient(to top left, #32CBE3, #576BE4);
+        grid-column: 1/-1;
+        grid-row: span 2;
+    
+     
+    }
+    .footer{
+        border: 1px solid black;
+        background: #CF9FFF;
+        grid-column: 1/-1;
+        grid-row: span 1;
+    
+    }
+    .text-center{
+        text-align: center;
+        color: white;
+        font-style: bold;
+        font-family: "Roboto";
+    }
+}
