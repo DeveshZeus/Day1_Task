@@ -1,0 +1,241 @@
+*{
+    margin: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #EEEEEE;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+}
+.remove-styles {
+    background: none;
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+/*Header*/
+header{
+    width: auto;
+    height: 56px;
+    display: flex;
+    background-image: transparent url("./images/header pattern image.png");
+    background-color: #25313F;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+}
+header ul a{
+    text-decoration: none;
+    color: #3FD28B;
+}
+header ul{
+    list-style-type: none;
+    width: 60%  ;
+    display: flex;
+    justify-content: space-between;
+}
+.notification{
+    position:relative;
+    background-color: #2A7FF3;
+    color : white;
+    border-radius: 60%;
+    margin: none;
+    padding: 1px 3px;
+    size: auto;
+    bottom:10px;
+    right: 10px;
+}
+.notification-prof{
+    position:relative;
+    background-color: #FFFFFF;
+    color: black;
+    border-radius: 40%;
+    margin: none;
+    padding: 1px 3px;
+    size: auto;
+    bottom:10px;
+    right: 10px;
+
+}
+.white-hover {
+    padding-top: 19px;
+    padding-bottom: 5.5px;
+    margin-bottom:6px;
+    border-bottom: 0.25rem solid transparent;
+}
+
+.white-hover a:hover {
+    color: #FFFF;
+}
+
+.white-hover:hover{
+    border-bottom: 4px solid #FFFF;
+    cursor: pointer;
+}
+/*Content*/
+main{
+    margin:24px;
+}
+/*Main Head*/
+
+/*Courses heading*/
+.course-class{
+    display:flex;
+    background-color: #8DDC97;
+    justify-content: space-around;
+    height: 64px;
+}
+.courses{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    border-bottom: 4px solid transparent;
+}
+.courses:hover{
+    border-bottom: 4px solid #222222;
+}
+.courses strong{
+    margin: 0px 5px;
+}
+
+/*show-sort opiton*/
+.show-sort{
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0px;
+    border-bottom: 1px solid lightgray;
+}
+.show-head{
+    color:#686868;
+    display: inline-block;
+    height: 15px;
+}
+.show-sort p{
+    margin-top: 10px;
+}
+.sort-dropdown{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.sort-dropdown select{
+    border-bottom: 1px solid lightgray;
+    width: 165px;
+    font-size: large;
+    margin-right: 20px;
+}
+/*Courses*/
+.course1{
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.course-container{
+    margin: 24px 24px 0px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.content-courses{
+    display: grid;
+    grid-template: repeat(2,1fr)/repeat(2, 1fr);
+    grid-gap: 20px;
+}
+.course-writing{
+    color:#686868;
+    font-size: medium;
+}
+.course-main{
+    display: flex;
+    background-color: #FFFFFF;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+.heading-course{
+    display: flex;
+    justify-content: space-between;
+}
+.course-info{
+    margin-left: 30px;
+    width: 90%;
+}
+.course-info p{
+    margin-top:8px;
+}
+.course-info h2{
+    display: inline-block;
+}
+#course-sel{
+    width: 90%;
+    font-size: larger;
+    font-weight: 100;
+    margin-top: 16px;
+    border-bottom: 1px solid lightgray;
+}
+.course-footer-container{
+    border-top: 1px solid lightgray;
+}
+
+.course-footer{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin: 20px auto 10px auto;
+}
+
+/* Footer */
+.info {
+    background-color: #EEEEEE;
+    height: 2.125rem;
+    text-align: center;
+}
+
+.about {
+    border-right: 0.03rem solid #dddada;
+    padding-right: 0.0.63rem;
+}
+
+.contact {
+    border-left: 0.03rem solid #dddada;
+    padding-left: 0.25rem;
+}
+
+.company-info {
+    background-color: #E0E1E1;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-logo {
+    margin: 0 0.25rem;
+    border-right: 0.125rem solid #b9b3b3;
+    padding-right: 0.3rem;
+}
+
+.copyright {
+    margin: 0 0.25rem;
+    font-size: 0.75rem;
+    color: #616161;
+}
+
+.company-name {
+    margin: 0 0.25rem;
+    color: #616161;
+    font-weight: 700;
+    font-size: 0.75rem;
+}
+
+.rights {
+    margin: 0 0.25rem;
+    font-size: 0.75rem;
+    color: #616161;
+}

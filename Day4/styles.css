@@ -62,10 +62,6 @@ input {
     font-weight: 500;
 }
 
-input::-webkit-calendar-picker-indicator {
-    opacity: 100;
-}
-
 /* Header */
 
 header {
