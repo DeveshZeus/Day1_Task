@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<htmllang="en">
+<html lang="en">
     <head>
         <title>Dashboard|Quantum</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -7,25 +7,26 @@
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
         <link href="./dashboardstyle.css" rel="stylesheet">
+        <script src="./dashboard.js"></script>
     </head>
-    <body>
+    <body id="my-body">
         <header>
             <img src="./icons/logo used in header.svg" id="logo" alt="Quantum Logo">
             
-            <ul class="options remove-styles">
-                <li class="white-hover">
+            <ul class="options" style="background: none; outline: none; border: none;">
+                <li class="white-hover small-screen-disable">
                     <a href="#">DASHBOARD</a>
                 </li>
-                <li class="white-hover">
+                <li class="white-hover small-screen-disable">
                     <a href="#">CONTENT</a>
                 </li>
-                <li class="white-hover">
+                <li class="white-hover small-screen-disable">
                     <a href="#">USERS</a>
                 </li>
-                <li class="white-hover">
+                <li class="white-hover small-screen-disable">
                     <a href="#">REPORTS</a>
                 </li>
-                <li class="white-hover">
+                <li class="white-hover small-screen-disable">
                     <a href="#">ADMIN</a>
                 </li>
                 <li class="white-hover">
@@ -46,12 +47,38 @@
                     </a>
                     <span class="notification-prof">1</span>
 
-                </li>            
+                </li>
+                <li class="hamburger-menu white-hover">
+                    <button class="remove-styles" id="btn-menu" onclick="openSideBar()">
+                        <img src="./icons/hamburger-menu.svg">
+                    </button>
+                </li>             
             </ul>
 
 
         </header>
-        <main>
+        
+        <main id="main">
+            <nav class="sidebar" id="my-side-bar">
+                <button id="close" class="remove-styles" onclick="closeSideBar()">X</button>
+                <ul class="remove-styles">
+                    <li class="white-hover" style="margin-bottom: 20px;">
+                        <a href="#">DASHBOARD</a>
+                    </li>
+                    <li class="white-hover" style="margin-bottom: 20px;">
+                        <a href="#">CONTENT</a>
+                    </li>
+                    <li class="white-hover" style="margin-bottom: 20px;">
+                        <a href="#">USERS</a>
+                    </li>
+                    <li class="white-hover" style="margin-bottom: 20px;">
+                        <a href="#">REPORTS</a>
+                    </li>
+                    <li class="white-hover" style="margin-bottom: 20px;">
+                        <a href="#">ADMIN</a>
+                    </li>
+                </ul>
+            </nav>
             <div class="main-head">
                 <div class="course-class">
                     <div class="courses">
@@ -85,19 +112,21 @@
                     <div class="course-container">
                         <div class="course-main">
                             <div class="course-image">
-                                <img src="./images/imageMask-1.png">
+                                <img src="./images/imageMask.png">
                             </div>
                             <div class="course-info">
                                 <div class="heading-course">
                                     <h2>Acceleration</h2>
                                     <img src="./icons/favourite.svg">
                                 </div>
-                                <p class="course-writing">Physics&nbsp;|&nbsp;&nbsp;Grade 7+2</p>
+                                <p class="course-writing">Physics&nbsp;|&nbsp;&nbsp;Grade 7+<span style="color: green">2</span></p>
                                 <p class="course-writing"><b>4</b>&nbsp;Units&nbsp;<b>18</b>&nbsp;Lessons&nbsp;<b>24</b>&nbsp;Topics</p>
                                 <select class="remove-styles" name="course-select" id="course-sel">
-                                    <option value="all">All Classes</option>
+                                    <option value=""></option>
+                                    <option value="all" fixed>All Classes</option>
                                     <option value="b">Mr. Frank's Class B</option>
                                     <option value="a">Mr. Frank's Class A</option>
+                                    <option value="null">No class</option>
                                 </select>
                                 <p class="course-writing">50 Students&nbsp;|&nbsp;&nbsp;21-Jan-2020&nbsp;-&nbsp;21-Aug-2020</p>
                             </div>
@@ -120,24 +149,20 @@
                             </div>
                             <div class="course-info">
                                 <div class="heading-course">
-                                    <h2>Acceleration</h2>
-                                    <img src="./icons/favourite.svg">
+                                    <h2>Displacement,&nbsp;Velocity and Speed</h2>
                                 </div>
-                                <p class="course-writing">Physics&nbsp;|&nbsp;&nbsp;Grade 7+2</p>
-                                <p class="course-writing"><b>4</b>&nbsp;Units&nbsp;<b>18</b>&nbsp;Lessons&nbsp;<b>24</b>&nbsp;Topics</p>
-                                <select class="remove-styles" name="course-select" id="course-sel">
-                                    <option value="all">All Classes</option>
-                                    <option value="b">Mr. Frank's Class B</option>
-                                    <option value="a">Mr. Frank's Class A</option>
+                                <p class="course-writing">Physics 2&nbsp;|&nbsp;&nbsp;Grade 6+<span style="color: green">3</span></p>
+                                <p class="course-writing"><b>2</b>&nbsp;Units&nbsp;<b>15</b>&nbsp;Lessons&nbsp;<b>20</b>&nbsp;Topics</p>
+                                <select class="remove-styles" name="course-select" id="course-sel" disabled>
+                                    <option value="null">No class</option>
                                 </select>
-                                <p class="course-writing">50 Students&nbsp;|&nbsp;&nbsp;21-Jan-2020&nbsp;-&nbsp;21-Aug-2020</p>
                             </div>
                         </div>
                         <div class="course-footer-container">
                             <div class="course-footer">
                                 <img src="./icons/preview.svg">
-                                <img src="./icons/manage course.svg">
-                                <img src="./icons/grade submissions.svg">
+                                <img src="./icons/manage course.svg" style="opacity: 50%">
+                                <img src="./icons/grade submissions.svg" style="opacity: 50%">
                                 <img src="./icons/reports.svg">
                             </div>
                         </div>
@@ -147,28 +172,28 @@
                     <div class="course-container">
                         <div class="course-main">
                             <div class="course-image">
-                                <img src="./images/imageMask-1.png">
+                                <img src="./images/imageMask-3.png">
                             </div>
                             <div class="course-info">
                                 <div class="heading-course">
-                                    <h2>Acceleration</h2>
+                                    <h2>Introduction to Biology: Microorganisms and how they affect us</h2>
                                     <img src="./icons/favourite.svg">
                                 </div>
-                                <p class="course-writing">Physics&nbsp;|&nbsp;&nbsp;Grade 7+2</p>
-                                <p class="course-writing"><b>4</b>&nbsp;Units&nbsp;<b>18</b>&nbsp;Lessons&nbsp;<b>24</b>&nbsp;Topics</p>
+                                <p class="course-writing">Biology&nbsp;|&nbsp;&nbsp;Grade 4+<span style="color: green">1</span></p>
+                                <p class="course-writing"><b>5</b>&nbsp;Units&nbsp;<b>16</b>&nbsp;Lessons&nbsp;<b>22</b>&nbsp;Topics</p>
                                 <select class="remove-styles" name="course-select" id="course-sel">
                                     <option value="all">All Classes</option>
                                     <option value="b">Mr. Frank's Class B</option>
                                     <option value="a">Mr. Frank's Class A</option>
                                 </select>
-                                <p class="course-writing">50 Students&nbsp;|&nbsp;&nbsp;21-Jan-2020&nbsp;-&nbsp;21-Aug-2020</p>
+                                <p class="course-writing">300 Students</p>
                             </div>
                         </div>
                         <div class="course-footer-container">
                             <div class="course-footer">
-                                <img src="./icons/preview.svg">
-                                <img src="./icons/manage course.svg">
-                                <img src="./icons/grade submissions.svg">
+                                <img src="./icons/preview.svg" >
+                                <img src="./icons/manage course.svg" style="opacity: 50%;">
+                                <img src="./icons/grade submissions.svg" style="opacity: 50%;">
                                 <img src="./icons/reports.svg">
                             </div>
                         </div>
@@ -178,21 +203,20 @@
                     <div class="course-container">
                         <div class="course-main">
                             <div class="course-image">
-                                <img src="./images/imageMask-1.png">
+                                <img src="./images/imageMask-2.png">
                             </div>
                             <div class="course-info">
                                 <div class="heading-course">
-                                    <h2>Acceleration</h2>
+                                    <h2>Introduction to High School Mathematics</h2>
                                     <img src="./icons/favourite.svg">
                                 </div>
-                                <p class="course-writing">Physics&nbsp;|&nbsp;&nbsp;Grade 7+2</p>
-                                <p class="course-writing"><b>4</b>&nbsp;Units&nbsp;<b>18</b>&nbsp;Lessons&nbsp;<b>24</b>&nbsp;Topics</p>
+                                <p class="course-writing">Mathematics&nbsp;|&nbsp;&nbsp;Grade 8+<span style="color: green">3</span></p>
                                 <select class="remove-styles" name="course-select" id="course-sel">
                                     <option value="all">All Classes</option>
                                     <option value="b">Mr. Frank's Class B</option>
                                     <option value="a">Mr. Frank's Class A</option>
                                 </select>
-                                <p class="course-writing">50 Students&nbsp;|&nbsp;&nbsp;21-Jan-2020&nbsp;-&nbsp;21-Aug-2020</p>
+                                <p class="course-writing">44 Students&nbsp;|&nbsp;&nbsp;14-Oct-2019&nbsp;-&nbsp;20-Oct-2020</p>
                             </div>
                         </div>
                         <div class="course-footer-container">
