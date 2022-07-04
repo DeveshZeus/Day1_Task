@@ -4,5 +4,5 @@ function openSideBar(){
 }
 function closeSideBar(){
     document.getElementById("my-side-bar").style.width="0";
-    document.getElementById("main").style.marginRight="2.6%";
+    document.getElementById("main").style.marginRight="";
 }

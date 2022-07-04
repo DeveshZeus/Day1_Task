@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="utf-8">
         <title>Dashboard|Quantum</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,47 +11,47 @@
         <script src="./dashboard.js"></script>
     </head>
     <body id="my-body">
-        <header>
-            <img src="./icons/logo used in header.svg" id="logo" alt="Quantum Logo">
+        <header aria-label="Header">
+            <img src="./icons/header_logo.svg" id="logo" alt="Quantum Logo">
             
-            <ul class="options" style="background: none; outline: none; border: none;">
-                <li class="white-hover small-screen-disable">
+            <ul class="options" style="background: none; outline: none; border: none;" role="menubar">
+                <li class="white-hover small-screen-disable" role="menuitem">
                     <a href="#">DASHBOARD</a>
                 </li>
-                <li class="white-hover small-screen-disable">
+                <li class="white-hover small-screen-disable" role="menuitem">
                     <a href="#">CONTENT</a>
                 </li>
-                <li class="white-hover small-screen-disable">
+                <li class="white-hover small-screen-disable" role="menuitem">
                     <a href="#">USERS</a>
                 </li>
-                <li class="white-hover small-screen-disable">
+                <li class="white-hover small-screen-disable" role="menuitem">
                     <a href="#">REPORTS</a>
                 </li>
-                <li class="white-hover small-screen-disable">
+                <li class="white-hover small-screen-disable" role="menuitem">
                     <a href="#">ADMIN</a>
                 </li>
-                <li class="white-hover">
+                <li class="white-hover" role="menuitem">
                     <a href="#">
-                        <img src="./icons/alerts.svg">
+                        <img src="./icons/alerts.svg" alt="alert button">
                     </a>
                     <span class="notification">2</span>
                 </li>
-                <li class="white-hover">
+                <li class="white-hover" role="menuitem">
                     <a href="#">
-                        <img src="./icons/announcements.svg">
+                        <img src="./icons/announcements.svg" alt="announcement button">
                     </a>
                     <span class="notification">1</span>
                 </li>
-                <li class="white-hover">
+                <li class="white-hover" role="menuitem">
                     <a href="#">
-                        <img src="./icons/checkbox-unchecked.svg">
+                        <img src="./icons/checkbox_unchecked.svg" alt="user profile">
                     </a>
                     <span class="notification-prof">1</span>
 
                 </li>
-                <li class="hamburger-menu white-hover">
+                <li class="hamburger-menu white-hover" role="menuitem">
                     <button class="remove-styles" id="btn-menu" onclick="openSideBar()">
-                        <img src="./icons/hamburger-menu.svg">
+                        <img src="./icons/hamburger_menu.svg" alt="side menu button">
                     </button>
                 </li>             
             </ul>
@@ -58,23 +59,23 @@
 
         </header>
         
-        <main id="main">
-            <nav class="sidebar" id="my-side-bar">
+        <main id="main" aria-label="Main region of page">
+            <nav class="sidebar" id="my-side-bar" role="menu">
                 <button id="close" class="remove-styles" onclick="closeSideBar()">X</button>
-                <ul class="remove-styles">
-                    <li class="white-hover" style="margin-bottom: 20px;">
+                <ul class="remove-styles" role="menu">
+                    <li class="white-hover" style="margin-bottom: 20px;" role="menuitem" tabindex="0">
                         <a href="#">DASHBOARD</a>
                     </li>
-                    <li class="white-hover" style="margin-bottom: 20px;">
+                    <li class="white-hover" style="margin-bottom: 20px;" role="menuitem" tabindex="1">
                         <a href="#">CONTENT</a>
                     </li>
-                    <li class="white-hover" style="margin-bottom: 20px;">
+                    <li class="white-hover" style="margin-bottom: 20px;" role="menuitem" tabindex="-1">
                         <a href="#">USERS</a>
                     </li>
-                    <li class="white-hover" style="margin-bottom: 20px;">
+                    <li class="white-hover" style="margin-bottom: 20px;" role="menuitem" tabindex="-1">
                         <a href="#">REPORTS</a>
                     </li>
-                    <li class="white-hover" style="margin-bottom: 20px;">
+                    <li class="white-hover" style="margin-bottom: 20px;" role="menuitem" tabindex="-1">
                         <a href="#">ADMIN</a>
                     </li>
                 </ul>
@@ -82,12 +83,12 @@
             <div class="main-head">
                 <div class="course-class">
                     <div class="courses">
-                        <img src="./icons/courses.svg">
+                        <img src="./icons/courses.svg" alt="course icon">
                         <strong class="head">4</strong>
                         <span>courses</span>
                     </div>
                     <div class="courses">
-                        <img src="./icons/classes.svg">
+                        <img src="./icons/classes.svg" alt="class icon">
                         <strong>4</strong>
                         <span>classes</span>
                     </div>
@@ -95,15 +96,15 @@
                 <div class="show-sort">
                     <p class="show-head">Showing 4 of 4 courses</p>
                     <div class="sort-dropdown">
-                        <label for id="sort"class="show-head">
+                        <label for id="sort" class="show-head">
                             Sort by:
                         </label>
-                        <select class="remove-styles" name="sort-select" id="sort">
+                        <select class="remove-styles course-sel" name="sort-select" id="sort">
                             <option value="name">Course Name</option>
                             <option value="date">Course Date</option>
                             <option value="ratings">Course Ratings</option>
                         </select>
-                        <img src="./icons/sort.svg">
+                        <img src="./icons/sort.svg" alt="sort button">
                     </div>
                 </div>
             </div>
@@ -112,18 +113,17 @@
                     <div class="course-container">
                         <div class="course-main">
                             <div class="course-image">
-                                <img src="./images/imageMask.png">
+                                <img src="./images/imageMask.png" alt="Acceleration course image">
                             </div>
                             <div class="course-info">
                                 <div class="heading-course">
                                     <h2>Acceleration</h2>
-                                    <img src="./icons/favourite.svg">
+                                    <img src="./icons/favourite.svg" alt="favourite icon">
                                 </div>
                                 <p class="course-writing">Physics&nbsp;|&nbsp;&nbsp;Grade 7+<span style="color: green">2</span></p>
                                 <p class="course-writing"><b>4</b>&nbsp;Units&nbsp;<b>18</b>&nbsp;Lessons&nbsp;<b>24</b>&nbsp;Topics</p>
-                                <select class="remove-styles" name="course-select" id="course-sel">
-                                    <option value=""></option>
-                                    <option value="all" fixed>All Classes</option>
+                                <select class="remove-styles course-sel" name="course-select">
+                                    <option value="all" selected>All Classes</option>
                                     <option value="b">Mr. Frank's Class B</option>
                                     <option value="a">Mr. Frank's Class A</option>
                                     <option value="null">No class</option>
@@ -133,10 +133,10 @@
                         </div>
                         <div class="course-footer-container">
                             <div class="course-footer">
-                                <img src="./icons/preview.svg">
-                                <img src="./icons/manage course.svg">
-                                <img src="./icons/grade submissions.svg">
-                                <img src="./icons/reports.svg">
+                                <img src="./icons/preview.svg" alt="Course Preview button">
+                                <img src="./icons/manage_course.svg" alt="Manage courses button">
+                                <img src="./icons/grade_submissions.svg" alt="Grade submissions button">
+                                <img src="./icons/reports.svg" alt="reports of courses button">
                             </div>
                         </div>
                     </div>
@@ -145,7 +145,7 @@
                     <div class="course-container">
                         <div class="course-main">
                             <div class="course-image">
-                                <img src="./images/imageMask-1.png">
+                                <img src="./images/imageMask-1.png" alt="Displacement, Velocity and Speed course image">
                             </div>
                             <div class="course-info">
                                 <div class="heading-course">
@@ -153,17 +153,17 @@
                                 </div>
                                 <p class="course-writing">Physics 2&nbsp;|&nbsp;&nbsp;Grade 6+<span style="color: green">3</span></p>
                                 <p class="course-writing"><b>2</b>&nbsp;Units&nbsp;<b>15</b>&nbsp;Lessons&nbsp;<b>20</b>&nbsp;Topics</p>
-                                <select class="remove-styles" name="course-select" id="course-sel" disabled>
+                                <select class="remove-styles course-sel" name="course-select"  disabled>
                                     <option value="null">No class</option>
                                 </select>
                             </div>
                         </div>
                         <div class="course-footer-container">
                             <div class="course-footer">
-                                <img src="./icons/preview.svg">
-                                <img src="./icons/manage course.svg" style="opacity: 50%">
-                                <img src="./icons/grade submissions.svg" style="opacity: 50%">
-                                <img src="./icons/reports.svg">
+                                <img src="./icons/preview.svg" alt="Course Preview button">
+                                <img src="./icons/manage_course.svg" style="opacity: 50%" alt="Manage course button">
+                                <img src="./icons/grade_submissions.svg" style="opacity: 50%" alt="Grade submission button">
+                                <img src="./icons/reports.svg" alt="Reports of courses button">
                             </div>
                         </div>
                     </div>
@@ -172,16 +172,16 @@
                     <div class="course-container">
                         <div class="course-main">
                             <div class="course-image">
-                                <img src="./images/imageMask-3.png">
+                                <img src="./images/imageMask-3.png" alt="Introduction to Biology course image">
                             </div>
                             <div class="course-info">
                                 <div class="heading-course">
                                     <h2>Introduction to Biology: Microorganisms and how they affect us</h2>
-                                    <img src="./icons/favourite.svg">
+                                    <img src="./icons/favourite.svg" alt="favourite icon">
                                 </div>
                                 <p class="course-writing">Biology&nbsp;|&nbsp;&nbsp;Grade 4+<span style="color: green">1</span></p>
                                 <p class="course-writing"><b>5</b>&nbsp;Units&nbsp;<b>16</b>&nbsp;Lessons&nbsp;<b>22</b>&nbsp;Topics</p>
-                                <select class="remove-styles" name="course-select" id="course-sel">
+                                <select class="remove-styles course-sel" name="course-select" >
                                     <option value="all">All Classes</option>
                                     <option value="b">Mr. Frank's Class B</option>
                                     <option value="a">Mr. Frank's Class A</option>
@@ -191,10 +191,10 @@
                         </div>
                         <div class="course-footer-container">
                             <div class="course-footer">
-                                <img src="./icons/preview.svg" >
-                                <img src="./icons/manage course.svg" style="opacity: 50%;">
-                                <img src="./icons/grade submissions.svg" style="opacity: 50%;">
-                                <img src="./icons/reports.svg">
+                                <img src="./icons/preview.svg" alt="COurse preview button">
+                                <img src="./icons/manage_course.svg" style="opacity: 50%;" alt="manage courses button">
+                                <img src="./icons/grade_submissions.svg" style="opacity: 50%;" alt="Grade submission button">
+                                <img src="./icons/reports.svg" alt="Reports of courses button">
                             </div>
                         </div>
                     </div>
@@ -203,15 +203,15 @@
                     <div class="course-container">
                         <div class="course-main">
                             <div class="course-image">
-                                <img src="./images/imageMask-2.png">
+                                <img src="./images/imageMask-2.png" alt="Introduction to High School Mathematics course image">
                             </div>
                             <div class="course-info">
                                 <div class="heading-course">
                                     <h2>Introduction to High School Mathematics</h2>
-                                    <img src="./icons/favourite.svg">
+                                    <img src="./icons/favourite.svg" alt="favourite icon">
                                 </div>
                                 <p class="course-writing">Mathematics&nbsp;|&nbsp;&nbsp;Grade 8+<span style="color: green">3</span></p>
-                                <select class="remove-styles" name="course-select" id="course-sel">
+                                <select class="remove-styles course-sel" name="course-select" >
                                     <option value="all">All Classes</option>
                                     <option value="b">Mr. Frank's Class B</option>
                                     <option value="a">Mr. Frank's Class A</option>
@@ -221,10 +221,10 @@
                         </div>
                         <div class="course-footer-container">
                             <div class="course-footer">
-                                <img src="./icons/preview.svg">
-                                <img src="./icons/manage course.svg">
-                                <img src="./icons/grade submissions.svg">
-                                <img src="./icons/reports.svg">
+                                <img src="./icons/preview.svg" alt="Course Preview Button">
+                                <img src="./icons/manage_course.svg" alt="Manage Course Button">
+                                <img src="./icons/grade_submissions.svg" alt="Grade submission button">
+                                <img src="./icons/reports.svg" alt="Report on course button">
                             </div>
                         </div>
                     </div>
@@ -232,7 +232,7 @@
             </div>
         </main>
         
-        <footer>
+        <footer aria-label="Footer  ">
             <div class="info">
                 <span class="about">
                     <a href="#" class="p-a-styles">
@@ -247,7 +247,7 @@
             </div>
 
             <div class="company-info">
-                <img src="./icons/logo used in footer.svg" alt="logo" class="bottom-logo">
+                <img src="./icons/footer_logo.svg" alt="logo" class="bottom-logo">
                 <span class="copyright">
                     Copyright &#169; 2020-2021
                 </span>
