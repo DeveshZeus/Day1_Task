@@ -1,0 +1,33 @@
+@use './util' as u;
+header{
+    width: auto;
+    height: 56px;
+    background-color: u.$header-color;
+    background-image: u.$header-image;
+    padding: 0 1.5rem;
+    @include u.forFlex(space-between, center);
+
+    ul{
+        list-style-type: none;
+        @include u.forFlex(space-between, stretch);
+        width: 60%;
+        a{
+            @include u.links;
+        }
+        .notification{
+            @include u.forNotification(#2A7FF3, white, 60%);
+        }
+        .notification-prof{
+            @include u.forNotification(#FFFFFF, black, 40%);
+        }
+        .white-hover {
+            padding-bottom: 8px;
+            margin-top: 20px;
+            border-bottom: 4px solid transparent;
+            @include u.hoverItem;
+        }
+        .hamburger-menu{
+            display: none;
+        }
+    }
+}

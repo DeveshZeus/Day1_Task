@@ -1,0 +1,109 @@
+@use './util' as u;
+main{
+    margin : 24px;
+    .sidebar{
+        @include u.takeWholeContainer;
+        @include u.forSideBar;
+        ul{
+            list-style-type: none;
+            @include u.forFlex(space-around, stretch);
+            flex-direction: column;
+            a{
+                @include u.links;
+            }
+            margin-top: 30%;
+            margin-left: 20px;
+        }
+    }
+    .course-class{
+        background-color: u.$main-head;
+        height: 64px;
+        @include u.forFlex(space-around, stretch);
+        .courses{
+            @include u.forFlex(center, center);
+            width: 50%;
+            border-bottom: 4px solid transparent;
+            strong{
+                margin: 0px 5px;
+            }
+            &:hover{
+                border-bottom: 4px solid #222222;
+            }
+        }
+    }
+    .show-sort{
+        @include u.forFlex(space-between, stretch);
+        margin: 24px 0px;
+        border-bottom: u.$bottomborder;
+        .show-head{
+            color:#686868;
+            display: inline-block;
+            height: 15px;
+        }
+        p{
+            margin-top : 10px;
+        }
+        .sort-dropdown{
+            @include u.forFlex(center, center);
+            margin-bottom: 20px;
+            select{
+                width: 165px;
+                font-size: large;
+                margin-right: 20px;
+                border-bottom: u.$bottomborder;
+            }
+        }
+    }
+    .content-courses{
+        display: grid;
+        grid-template: repeat(2,1fr)/repeat(2, 1fr);
+        grid-gap: 20px;
+        .course1{
+            background-color: u.$courseback;
+            @include u.forFlex(center, stretch);
+            flex-direction: column;
+            .course-container{
+                @include u.forFlex(space-between, stretch);
+                flex-direction: column;
+                margin : 24px 24px 0 24px;
+            }
+
+            .course-main{
+                background-color: u.$courseback;
+                @include u.forFlex(flex-start, stretch);
+                margin-bottom: 10px;
+            }
+            .course-writing{
+                color:#686868;
+                font-size: medium;
+            }
+            .course-info{
+                margin-left: 30px;
+                width: 90%;
+                .heading-course{
+                    @include u.forFlex(space-between, stretch);
+                }
+                p{
+                    margin-top : 8px;
+                }
+                h2{
+                    display: inline-block;
+                }
+                .course-sel{
+                    width: 90%;
+                    font-size: larger;
+                    font-weight: 100;
+                    margin-top: 16px;
+                    border-bottom: u.$bottomborder;
+                }
+            }
+            .course-footer-container{
+                border-top: u.$bottomborder;
+                .course-footer{
+                    @include u.forFlex(space-around, stretch);
+                    margin: 20px auto 10px auto;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@use './util' as u;
+footer{
+    .info {
+        background-color: #EEEEEE;
+        height: 2.125rem;
+        text-align: center;
+    }
+    .about {
+        border-right: u.$aboutcontact;
+        padding-right: 0.63rem;
+    }
+    
+    .contact {
+        border-left: u.$aboutcontact;
+        padding-left: 0.25rem;
+    }
+    .company-info {
+        background-color: #E0E1E1;
+        height: 2.5rem;
+        @include u.forFlex(center, center);
+    }
+    
+    .bottom-logo {
+        margin: 0 0.25rem;
+        border-right: 0.125rem solid #b9b3b3;
+        padding-right: 0.3rem;
+    }
+    .copyright {
+        @include u.copyright;
+    }
+    
+    .company-name {
+        @include u.copyright;
+        font-weight: 700;
+    }
+    
+    .rights {
+        @include u.copyright;
+    }
+    
+}

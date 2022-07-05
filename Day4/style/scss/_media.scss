@@ -1,0 +1,42 @@
+@use './util' as u;
+@media only screen and (max-width: 900px){
+    body{
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: auto;
+    }
+    
+    header{
+        grid-column: 1/-1;
+        grid-row: 1/3;
+        ul{
+            @include u.forFlex(space-between, stretch);
+            width: 35%;
+            .small-screen-disable{
+                display:none;
+            }
+            .hamburger-menu{
+                display: block;
+            }
+        }
+    }
+    main{
+        grid-column: 1/-1;
+        grid-row: 3/17;
+        .main-head{
+            grid-column: 1/-1;
+            grid-row: 3/5;
+        }
+        .course-courses{
+            grid-column:1/-1;
+            grid-row: 5/17
+        }
+        .course1{
+            grid-column:1/-1;
+            grid-row: auto;
+        }
+    }
+    footer{
+        grid-column: 1/-1;
+        grid-row: 17/19;
+    }
+}

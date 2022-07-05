@@ -1,0 +1,110 @@
+$font-throughout : 'Quicksand', sans-serif; //Font for whole page
+$font-body-wt : 500;
+$main-head : #8DDC97;
+$bottomborder :  1px solid lightgray;
+$courseback : #FFFFFF;
+$aboutcontact : 0.03rem solid #dddada;
+//Header variables
+$header-color : #25313F;
+$header-image : url("../../images/header pattern image.png");
+@mixin links{
+    text-decoration: none;
+    color : #3FD28B;
+}
+@mixin copyright{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0.25rem;
+    margin-bottom: 0.25rem;
+    font-size: 0.75rem;
+    color : #616161;
+}
+@mixin close{
+    background-color: lightgreen;
+    padding: 3px;
+    color: navy;
+    border: 1px solid navy;
+    border-radius: 2px;
+    height: 20px;
+    width: 20px;
+    margin-left: 85%;
+    margin-top: 5%;
+}
+@mixin gridDisplay{
+    display: grid;
+    grid-template-columns: 1 1fr;
+    grid-auto-rows: auto;
+}
+
+@mixin takeWholeContainer{
+    height: 100%;
+    min-height: 100%;
+}
+
+@mixin remove-styles {
+    background: none;
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin forFlex($justifycontent, $alignitem){
+    display: flex;
+    justify-content: $justifycontent;
+    align-items: $alignitem;
+}
+
+@mixin hoverItem{
+    &{
+        a:hover{
+            color:#FFFFFF;
+        }
+    }
+    &:hover{
+        border-bottom: 4px solid #FFFF;
+        cursor: pointer;
+    }
+}
+
+@mixin forNotification($background, $color, $borderradius){
+    position:relative;
+    margin: 0px;
+    padding: 1px 3px;
+    bottom:10px;
+    right: 10px;
+    background-color: $background;
+    color: $color;
+    border-radius: $borderradius;
+}
+
+//SideBar
+
+@mixin forSideBar{
+        position: fixed;
+        top:0;
+        right:0;
+        background-color: $header-color;
+        width:0;
+}
+
+//body
+*{
+    margin: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+.remove-styles{
+    @include remove-styles;
+}
+
+body {
+    @include takeWholeContainer;
+    background-color: #EEEEEE;
+    font-family: $font-throughout;
+    font-weight: $font-body-wt;
+    @include gridDisplay;
+}
+#close{
+    @include close;
+}
