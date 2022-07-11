@@ -15,10 +15,10 @@ header{
             @include u.links;
         }
         .notification{
-            @include u.forNotification(#2A7FF3, white, 60%);
+            @include u.forNotification(#2A7FF3, white, );
         }
         .notification-prof{
-            @include u.forNotification(#FFFFFF, black, 40%);
+            @include u.forNotification(#FFFFFF, black, );
         }
         .white-hover {
             padding-bottom: 8px;

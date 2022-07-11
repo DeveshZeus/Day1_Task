@@ -12,7 +12,7 @@ const courseData = [
         img : "./images/imageMask-1.png",
         topic : "Displacement,Velocity and Speed",
         isfavourite : true,
-        subject : "Physics\t2\t|\tGrade 6+\t3",
+        subject : "Physics\t2\t|\tGrade 6+\t<span>3</span>",
         unitName : "<b>2</b>\tUnits\t<b>15</b>\tLessons\t<b>20</b>\tTopics",
         classBy : "No Class",
         courseDur : ""
@@ -22,7 +22,7 @@ const courseData = [
         img : "./images/imageMask-3.png",
         topic : "Introduction to Biology",
         isfavourite : false,
-        subject : "Biology\t|\tGrade 4+\t1",
+        subject : "Biology\t|\tGrade 4+\t<span>1<span>",
         unitName : "<b>5</b>\tUnits\t<b>16</b>\tLessons\t<b>22</b>\tTopics",
         classBy : "All Classes",
         courseDur : "50 Students\t|\t21-Jan-2020\t-\t21-Aug-2020"
@@ -32,7 +32,7 @@ const courseData = [
         img : "./images/imageMask-2.png",
         topic : "Introduction to High School Mathematics",
         isfavourite : true,
-        subject : "Physics\t|\tGrade 7+\t2",
+        subject : "Physics\t|\tGrade 7+\t<span>2</span>",
         unitName : "<b>23</b>\tUnits\t<b>18</b>\tLessons\t<b>24</b>\tTopics",
         classBy : "Mr. Frank's Class A",
         courseDur : "300 Students"

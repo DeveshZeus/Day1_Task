@@ -1,0 +1,276 @@
+body main .form-container form .p-styles .p-a-styles {
+  font-size: 0.875rem;
+  text-decoration: none;
+  color: #1F7A54;
+}
+
+body main .form-container form .input-span-style {
+  display: block;
+  font-size: 0.75rem;
+  color: #666666;
+}
+
+* {
+  margin: 0px;
+  border: 0px;
+  box-sizing: border-box;
+}
+
+.remove-styles {
+  background: none;
+  outline: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  min-height: 100%;
+  background-color: #EEEEEE;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  display: grid;
+  grid-template-columns: 1 1fr;
+  grid-auto-rows: auto;
+}
+
+#close {
+  background-color: lightgreen;
+  padding: 3px;
+  color: navy;
+  border: 1px solid navy;
+  border-radius: 2px;
+  height: 20px;
+  width: 20px;
+  margin-left: 85%;
+  margin-top: 5%;
+}
+
+header {
+  width: auto;
+  height: 56px;
+  background-color: #25313F;
+  background-image: url("../../images/header pattern image.png");
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid skyblue;
+  grid-column: 1/-1;
+  grid-row: span 2;
+}
+header .separator {
+  height: 0.125rem;
+}
+
+footer {
+  grid-column: 1/-1;
+  grid-row: span 2;
+}
+footer .p-a-styles {
+  text-decoration: none;
+  color: #1F7A54;
+}
+footer .info {
+  background-color: #EEEEEE;
+  height: 2.125rem;
+  text-align: center;
+}
+footer .about {
+  border-right: 0.03rem solid #dddada;
+  padding-right: 0.63rem;
+}
+footer .contact {
+  border-left: 0.03rem solid #dddada;
+  padding-left: 0.25rem;
+}
+footer .company-info {
+  background-color: #E0E1E1;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .bottom-logo {
+  margin: 0 0.25rem;
+  border-right: 0.125rem solid #b9b3b3;
+  padding-right: 0.3rem;
+}
+footer .copyright {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0.25rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.75rem;
+  color: #616161;
+}
+footer .company-name {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0.25rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.75rem;
+  color: #616161;
+  font-weight: 700;
+}
+footer .rights {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0.25rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.75rem;
+  color: #616161;
+}
+
+body {
+  height: 100vh;
+}
+body main {
+  grid-column: 1/-1;
+  grid-row: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EEEEEE;
+}
+body main .form-container {
+  width: 30.5rem;
+}
+body main .form-container .separator {
+  height: 0.25rem;
+}
+body main .form-container form {
+  margin-top: 60.5px;
+  margin-bottom: 32px;
+  padding: 1rem 2rem;
+  background-color: #FFFFFF;
+}
+body main .form-container form .form-heading {
+  font-size: 1.5rem;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+body main .form-container form .form-heading img {
+  position: absolute;
+  left: -0.25rem;
+  top: 0.25rem;
+  height: 1.625rem;
+  width: 1.625rem;
+}
+body main .form-container form .form-school-type {
+  margin-top: 2.125rem;
+  font-size: 1rem;
+  display: flex;
+  justify-content: flex-;
+  align-items: center;
+}
+body main .form-container form .form-school-type label {
+  margin-right: 1rem;
+}
+body main .form-container form .form-school-type input {
+  height: 1.5rem;
+  width: 1.25rem;
+  margin-right: 0.5rem;
+  accent-color: #1F7A54;
+}
+body main .form-container form .form-school-type input #independent-school {
+  margin-left: 2rem;
+}
+body main .form-container form .form-state {
+  margin-top: 1.625rem;
+  font-size: 1rem;
+  position: relative;
+}
+body main .form-container form .form-state input {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  border-bottom: 1px solid #dddada;
+  margin: 0.375rem 0;
+}
+body main .form-container form .form-district {
+  margin-top: 2.25rem;
+  font-size: 1rem;
+  position: relative;
+}
+body main .form-container form .form-district input {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  border-bottom: 1px solid #dddada;
+  margin: 0.375rem 0;
+}
+body main .form-container form .form-username {
+  margin-top: 3.5rem;
+}
+body main .form-container form .form-password {
+  margin-top: 2.25rem;
+  position: relative;
+}
+body main .form-container form .form-password img {
+  position: absolute;
+  top: -0.25rem;
+  right: 0;
+}
+body main .form-container form .form-password img:hover {
+  cursor: pointer;
+}
+body main .form-container form .form-checkbox {
+  margin-top: 1.625rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+body main .form-container form .form-checkbox input {
+  width: 1.125rem;
+  height: 1.5rem;
+  accent-color: #1F7A54;
+  margin-right: 0.375rem;
+}
+body main .form-container form .form-submit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+body main .form-container form .form-submit-btn button {
+  margin-top: 2.125rem;
+  margin-bottom: 0.5rem;
+  width: 13.5rem;
+  height: 2.5rem;
+  background-color: #3FD28B;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2392156863);
+  border-radius: 2px;
+}
+body main .form-container form .p-styles {
+  text-align: right;
+}
+body main .form-container form .input-style {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  border-bottom: 1px solid #dddada;
+  margin: 0.375rem 0;
+}
+
+@media only screen and (max-width: 769px) {
+  header {
+    grid-column: 1/-1;
+    grid-row: span 1;
+  }
+  main {
+    grid-column: 1/-1;
+    grid-row: auto;
+  }
+  footer {
+    grid-column: 1/-1;
+    grid-row: span 2;
+  }
+}/*# sourceMappingURL=loginStyle.css.map */
