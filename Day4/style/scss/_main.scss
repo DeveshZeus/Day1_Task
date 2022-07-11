@@ -54,10 +54,17 @@ main{
             }
         }
     }
+    
     .content-courses{
-        display: grid;
-        grid-template: repeat(2,1fr)/repeat(2, 1fr);
-        grid-gap: 20px;
+        display : grid;
+        .content{
+            display: grid;
+            grid-template: repeat(2,1fr)/repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+        .separator{
+            display : none;
+        }
         .course1{
             background-color: u.$courseback;
             @include u.forFlex(center, stretch);
@@ -67,10 +74,13 @@ main{
                 flex-direction: column;
                 margin : 24px 24px 0 24px;
             }
-
+            h2{
+                text-overflow: ellipsis;
+                width: 100%;
+            }
             .course-main{
                 background-color: u.$courseback;
-                @include u.forFlex(flex-start, stretch);
+                @include u.forFlex(flex-start, flex-start);
                 margin-bottom: 10px;
             }
             .course-writing{

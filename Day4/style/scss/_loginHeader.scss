@@ -1,0 +1,15 @@
+@use './util' as u;
+header{
+    width: auto;
+    height: 56px;
+    background-color: u.$header-color;
+    background-image: u.$header-image;
+    padding: 0 1.5rem;
+    @include u.forFlex(space-between, center);
+    border-bottom : 4px solid skyblue;
+    .separator{
+        height: 0.125rem;
+    }
+    grid-column: 1/-1;
+    grid-row: span 2;
+}

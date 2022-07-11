@@ -6,3 +6,6 @@ function closeSideBar(){
     document.getElementById("my-side-bar").style.width="0";
     document.getElementById("main").style.marginRight="";
 }
+
+
+

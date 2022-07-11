@@ -1,0 +1,141 @@
+@use "./util" as u;
+@use "./loginHeader";
+@use "./footer";
+
+body{
+    height: 100vh;
+    main{
+        grid-column: 1/-1;
+        grid-row: auto;
+        @include u.forFlex(center, center);
+        background-color: #EEEEEE;
+     
+        .form-container{
+          width : 30.5rem;
+          .separator{
+             height: 0.25rem;
+          }
+          form{
+            margin-top: calc(108px - 47.5px);
+            margin-bottom: 32px;
+             padding : 1rem 2rem;
+             background-color: #FFFFFF;
+             .form-heading{
+                 font-size : 1.5rem;
+                 font-weight: 800;
+                 @include u.forFlex(center, center);
+                 position: relative;
+                 img{
+                     position: absolute;
+                     left: -0.25rem;
+                     top: 0.25rem;
+                     height: 1.625rem;
+                     width: 1.625rem;
+                 }
+             }
+             .form-school-type {
+                 margin-top: 2.125rem;
+                 font-size: u.$form-font;
+                 label{
+                    margin-right: 1rem;
+                 }
+                 @include u.forFlex(flex-, center);
+                 input{
+                     height: 1.5rem;
+                     width:1.25rem;
+                     margin-right: 0.5rem;
+                     accent-color: u.$checkbox;
+     
+                     #independent-school{
+                         margin-left : 2rem;
+                     }
+                 }
+             }
+             .form-state {
+                 margin-top: 1.625rem;
+                 font-size:u.$form-font;
+                 position: relative;
+                 input{
+                     @include u.input-style;
+                 }
+             }
+             .form-district {
+                 margin-top: 2.25rem;
+                 font-size: u.$form-font;
+                 position: relative;
+                 input{
+                     @include u.input-style;
+                 }
+             }
+             .form-username {
+                 margin-top: 3.5rem;
+             }
+             .form-password {
+                 margin-top: 2.25rem;
+                 position: relative;
+                 img{
+                     position: absolute;
+                     top: -0.25rem;
+                     right: 0;
+                     &:hover{
+                         cursor:pointer;
+                     }
+                 }
+             }
+             .form-checkbox {
+                 margin-top: 1.625rem;
+                 font-weight: 700;
+                 @include u.forFlex(flex-start, center);
+                 input{
+                     width: 1.125rem;
+                     height: 1.5rem;
+                     accent-color: u.$checkbox;
+                     margin-right: 0.375rem;
+                 }
+             }
+             .form-submit-btn {
+                 @include u.forFlex(center, stretch);
+                 button{
+                     margin-top: 2.125rem;
+                     margin-bottom: 0.5rem;
+                     width: 13.5rem;
+                     height: 2.5rem;
+                     background-color: #3FD28B; 
+                     border: none;
+                     outline: none;
+                     cursor: pointer;
+                     box-shadow: 0px 3px 5px #0000003D;
+                     border-radius: 2px;
+                 }
+             }
+             .p-styles{
+                 text-align: right;
+                 .p-a-styles{
+                     @extend %p-a-styles;
+                 }
+             }
+             .input-span-style {
+                 @extend %input-span-style;
+             }
+             .input-style{
+                 @include u.input-style;
+             }
+             
+          }
+        }
+     }
+}
+@media only screen and (max-width: 769px){
+    header{
+        grid-column: 1/-1;
+        grid-row: span 1;
+    }
+    main{
+        grid-column: 1/-1;
+        grid-row : auto;
+    }
+    footer{
+        grid-column: 1/-1;
+        grid-row: span 2;
+    }
+}
