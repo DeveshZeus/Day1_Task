@@ -265,12 +265,10 @@ body main .form-container form .input-style {
     grid-column: 1/-1;
     grid-row: span 1;
   }
-
   main {
     grid-column: 1/-1;
     grid-row: auto;
   }
-
   footer {
     grid-column: 1/-1;
     grid-row: span 2;

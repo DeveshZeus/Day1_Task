@@ -42,7 +42,7 @@ header {
   background-image: url("../../images/header pattern image.png");
   padding: 0 1.5rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 header ul {

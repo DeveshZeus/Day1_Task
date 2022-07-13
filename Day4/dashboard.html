@@ -7,8 +7,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
-        <script src="./dashboard.js"></script>
+        <link href="./css/style.css" rel="stylesheet">
+
     </head>
     <body id="my-body">
         <header aria-label="Header">
@@ -30,29 +30,85 @@
                 <li class="white-hover small-screen-disable" role="menuitem">
                     <a href="#">ADMIN</a>
                 </li>
-                <li class="white-hover" role="menuitem">
+                <li class="white-hover bell-option announcement-noti" role="menuitem">
                     <a href="#">
-                        <img src="./icons/alerts.svg" alt="alert button">
+                        <img src="./icons/alerts.svg" alt="alert button" class="bell-svg">
                     </a>
-                    <span class="notification">2</span>
+                    <div class="announcement--container">
+                        <div class="announcement-content-container"></div>
+                        <div class="sticky">
+                            <div>SHOW ALL</div>
+                        </div>
+                    </div>
+                    <span class="notification announce-noti"></span>
+                </li>
+                <li class="white-hover announcement-noti" role="menuitem">
+                    <a href="#">
+                        <img src="./icons/announcements.svg" alt="announcement button" class="microphone">
+                    </a>
+                    <div class="announcement--container">
+                        <div class="announcement-content-container"></div>
+                        <div class="sticky">
+                            <div>SHOW ALL</div>
+                        </div>
+                    </div>
+                    <span class="notification announce-noti"></span>
                 </li>
                 <li class="white-hover" role="menuitem">
                     <a href="#">
-                        <img src="./icons/announcements.svg" alt="announcement button">
-                    </a>
-                    <span class="notification">1</span>
-                </li>
-                <li class="white-hover" role="menuitem">
-                    <a href="#">
-                        <img src="./icons/checkbox_unchecked.svg" alt="user profile">
+                        <img src="./icons/user-icon.png" alt="user profile" id="user-dp">
                     </a>
                     <span class="notification-prof">1</span>
 
                 </li>
-                <li class="hamburger-menu white-hover" role="menuitem">
-                    <button class="remove-styles" id="btn-menu" onclick="openSideBar()">
+                <li class="hamburger-menu" role="menuitem">
+                    <button class="remove-styles" id="btn-menu">
                         <img src="./icons/hamburger_menu.svg" alt="side menu button">
                     </button>
+                    <div class = "mobile-menu">
+                        <div id="ham-dropdown" class="menu-hamburger">
+                            <ul class="remove-styles">
+                                <li>
+                                    <div class="opt">
+                                        <a href = "#">DASHBOARD</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="opt">
+                                        <a href = "#">CONTENT</a>
+                                        <img src="./icons/expand_more.svg" alt="expand_more" class="expand-more">
+                                        <img src="./icons/expand_less.svg" alt="expand_less" class="expand-less hide-it">
+                                    </div>
+                                    <div class="hidden-content">
+                                        <p>
+                                            COURSE CATALOG
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="opt">
+                                        <a href = "#">USERS</a>
+                                        <img src="./icons/expand_more.svg" alt="expand_more" class="expand-more">
+                                        <img src="./icons/expand_less.svg" alt="expand_less" class="expand-less hide-it">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="opt">
+                                        <a href = "#">REPORTS</a>
+                                        <img src="./icons/expand_more.svg" alt="expand_more" class="expand-more">
+                                        <img src="./icons/expand_less.svg" alt="expand_less" class="expand-less hide-it">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="opt">
+                                        <a href = "#">ADMIN</a>
+                                        <img src="./icons/expand_more.svg" alt="expand_more" class="expand-more">
+                                        <img src="./icons/expand_less.svg" alt="expand_less" class="expand-less hide-it">
+                                    </div> 
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </li>             
             </ul>
 
@@ -60,26 +116,7 @@
         </header>
         
         <main id="main" aria-label="Main region of page">
-            <nav class="sidebar" id="my-side-bar" role="menu">
-                <button id="close" class="remove-styles" onclick="closeSideBar()">X</button>
-                <ul class="remove-styles" role="menu">
-                    <li class="white-hover" style="margin-bottom: 20px;" role="menuitem" tabindex="0">
-                        <a href="#">DASHBOARD</a>
-                    </li>
-                    <li class="white-hover" style="margin-bottom: 20px;" role="menuitem" tabindex="1">
-                        <a href="#">CONTENT</a>
-                    </li>
-                    <li class="white-hover" style="margin-bottom: 20px;" role="menuitem" tabindex="-1">
-                        <a href="#">USERS</a>
-                    </li>
-                    <li class="white-hover" style="margin-bottom: 20px;" role="menuitem" tabindex="-1">
-                        <a href="#">REPORTS</a>
-                    </li>
-                    <li class="white-hover" style="margin-bottom: 20px;" role="menuitem" tabindex="-1">
-                        <a href="#">ADMIN</a>
-                    </li>
-                </ul>
-            </nav>
+           
             <div class="main-head">
                 <div class="course-class">
                     <div class="courses">
@@ -144,5 +181,9 @@
             </div>
         </footer>
         <script src="./render.js"></script>
+        <script src="./dashboard.js"></script>
+        <script src="./dropdowns.js"></script>
+        <script src="./alert-announcement.js"></script>
+
     </body>
 </html>

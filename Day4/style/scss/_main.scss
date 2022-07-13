@@ -82,6 +82,7 @@ main{
                 background-color: u.$courseback;
                 @include u.forFlex(flex-start, flex-start);
                 margin-bottom: 10px;
+                overflow: hidden;
             }
             .course-writing{
                 color:#686868;
