@@ -1,8 +1,16 @@
+//Variables
 let speakericon = document.querySelector(".microphone");
 let announcementli = document.querySelector(".speaker-option");
 let announcement_container = [...document.querySelectorAll(".announcement--container")];
-let dropdowns_content_container = [...document.querySelectorAll(".announcement-content-container")]
+let dropdown_container = [...document.querySelectorAll(".announcement-content-container")];
+let bellicon = document.querySelector(".bell-svg");
+let bellInList = document.querySelector(".bell-option");
 
+
+
+
+
+//Functions for opening and closing
 speakericon.addEventListener("mouseover", (e) => {
     announcement_container[1].classList.add("announcements--container--dropdown");
 });
@@ -11,141 +19,6 @@ document.addEventListener('click', (event) => {
         announcement_container[1].classList.remove("announcements--container--dropdown");
     }
 });
-const announcements = [
-    `<div class="announcement-content">
-        <div>
-            <p class="custom-font-size">
-                <span class="custom-color ">PA:</span>
-                Wilson Kumar
-            </p>
-            <img src="./icons/check_circle.svg" alt="check_circle">
-        </div>
-        <div>
-            No classes will be held on 21st Nov
-        </div>
-        <div class="custom-font-size ">
-            <span class="custom-color custom-span">
-                <img src="./icons/attach_file.svg" alt="attachments" class="attach-file">
-                2 files attached
-            </span>
-            <span class="custom-color">
-                15-Sep-2018 at 07:21 pm
-            </span>
-        </div>
-    </div>`,
-    `<div class="announcement-content dnd-on">
-        <div>
-            <p class="custom-font-size">
-                <span class="custom-color ">PA:</span>
-                Samson White
-            </p>
-            <img src="./icons/do_not_disturb.svg" alt="check_circle">
-        </div>
-    
-        <div>
-            Guest Lecture on Geometry on 20th September
-        </div>
-        <div class="custom-font-size ">
-            <span class="custom-content custom-span">
-                <img src="./icons/attach_file.svg" alt="attachments" class="attach-file">
-                2 files attached
-            </span>
-            <span class="custom-content">
-                15-Sep-2018 at 07:21 pm
-            </span>
-        </div>
-    </div>`,
-    `<div class="announcement-content">
-        <div>
-            <p class="custom-font-size">
-                <span class="custom-color ">PA:</span>
-                Wilson Kumar
-            </p>
-            <img src="./icons/check_circle.svg" alt="check_circle">
-        </div>
-    
-        <div>
-            Additional course materials avaialable on request
-        </div>
-    
-        <div class="custom-font-size custom-color">
-            Course: Mathematics 101
-        </div>
-    
-        <div class="custom-font-size ">
-            <span class="custom-color custom-span">
-                <!-- <img src="./icons/attach_file.svg" alt="attachments" class="attach-file">
-                2 files attached -->
-            </span>
-            <span class="custom-color">
-                15-Sep-2018 at 07:21 pm
-            </span>
-        </div>
-    </div>`,
-    `<div class="announcement-content dnd-on">
-        <div>
-            <p class="custom-font-size">
-                <span class="custom-color ">PA:</span>
-                Wilson Kumar
-            </p>
-            <img src="./icons/do_not_disturb.svg" alt="check_circle">
-        </div>
-    
-        <div>
-            No classes will be held on 25th Dec
-        </div>
-    
-        <div class="custom-font-size custom-color">
-            <!-- Course: Mathematics 101 -->
-        </div>
-    
-        <div class="custom-font-size ">
-            <span class="custom-color custom-span">
-                <!-- <img src="../svg/attach_file.svg" alt="attachments" class="attach-file">
-                                        2 files attached -->
-            </span>
-            <span class="custom-color">
-                15-Sep-2018 at 07:21 pm
-            </span>
-        </div>
-    </div>`,
-    `<div class="announcement-content dnd-on">
-        <div>
-            <p class="custom-font-size">
-                <span class="custom-color ">PA:</span>
-                Wilson Kumar
-            </p>
-            <img src="./icons/do_not_disturb.svg" alt="check_circle">
-        </div>
-        <div>
-            Additional course materials avaialable on request
-        </div>
-        <div class="custom-font-size custom-color">
-            Course: Mathematics 101
-        </div>
-        <div class="custom-font-size ">
-            <span class="custom-color custom-span">
-                <!-- <img src="../svg/attach_file.svg" alt="attachments" class="attach-file">
-                                                                2 files attached -->
-            </span>
-            <span class="custom-color">
-                15-Sep-2018 at 07:21 pm
-            </span>
-        </div>
-    </div>`
-];
-if(announcementli.lastElementChild){
-    announcementli.lastElementChild.textContent = `${announcements.length}`;
-}
-let allannouncement = "";
-for(let ele of announcements){
-    allannouncement += ele;
-}
-dropdowns_content_container[1].insertAdjacentHTML('afterbegin', allannouncement);
-
-//For NOtifications
-let bellicon = document.querySelector(".bell-svg");
-let bellInList = document.querySelector(".bell-option");
 bellicon.addEventListener("mouseover", (e) => {
     announcement_container[0].classList.add("announcements--container--dropdown");
 });
@@ -154,6 +27,108 @@ document.addEventListener('click', (event) => {
         announcement_container[0].classList.remove("announcements--container--dropdown");
     }
 });
+
+
+
+
+
+
+//Announcement dropdown rendering
+const announceData = [
+    {
+        check_circle : true,
+        do_not_disturb : false,
+        teacher : "Wilson Kumar",
+        message : "No classes will be held on 21st Nov",
+        files_attached : true,
+        time : "15-Sep-2018 at 07:21 pm",
+        course_available : 'NO'
+    },
+    {
+        check_circle : false,
+        do_not_disturb : true,
+        teacher : "Samson White",
+        message : " Guest Lecture on Geometry on 20th September",
+        files_attached : true,
+        time : "15-Sep-2018 at 07:21 pm",
+        course_available : 'NO'
+    },
+    {
+        check_circle : true,
+        do_not_disturb : false,
+        teacher : "Wilson Kumar",
+        message : "Additional course materials avaialable on request",
+        files_attached : true,
+        time : "15-Sep-2018 at 07:21 pm",
+        course_available : 'Mathematic 101'
+    },
+    {
+        check_circle : false,
+        do_not_disturb : true,
+        teacher : "Wilson Kumar",
+        message : "No classes will be held on 25th Dec",
+        files_attached : false,
+        time : "15-Sep-2018 at 07:21 pm",
+        course_available : 'NO'
+    },
+    {
+        check_circle : false,
+        do_not_disturb : true,
+        teacher : "Wilson Kumar",
+        message : "Additional course materials avaialable on request",
+        files_attached : true,
+        time : "15-Sep-2018 at 07:21 pm",
+        course_available : 'Mathematic 101'
+    }
+
+];
+function renderAnnouncement(announce){
+    return `
+        <div class="announcement-content ${announce.do_not_disturb ? `dnd-on` : ''}">
+            <div>
+                <p class="custom-font-size">
+                    <span class="custom-color ">PA:</span>
+                    ${announce.teacher}
+                </p>
+                ${announce.check_circle ? `<img src="./icons/check_circle.svg" alt="check_circle">`: `<img src="./icons/do_not_disturb.svg" alt="check_circle">`}
+            </div>
+            <div>
+                ${announce.message}
+            </div>
+            ${announce.course_available === 'NO' ? `
+            <div class="custom-font-size custom-color">
+            </div>
+            `: `
+                <div class="custom-font-size custom-color">
+                    Course: ${announce.course_available}
+                </div>
+            `}
+            
+            <div class="custom-font-size ">
+                <span class="custom-color custom-span">
+                    ${announce.files_attached ? `
+                        <img src="./icons/attach_file.svg" alt="attachments" class="attach-file">
+                        2 files attached
+                    `:''}     
+                </span>
+                <span class="custom-color">
+                    ${announce.time}
+                </span>
+            </div>
+        </div>
+    `
+}
+dropdown_container[1].insertAdjacentHTML('afterbegin', `${announceData.map(renderAnnouncement).join('')}`);
+
+if(announcementli.lastElementChild){
+    announcementli.lastElementChild.textContent = `${announceData.length}`;
+}
+
+
+
+
+
+//Notifications Rendering 
 const notifications = [
     `<div class= "announcement-content dnd-on" >
         <div >
@@ -238,4 +213,4 @@ let allNotifications = "";
 for(let obj of notifications){
     allNotifications+=obj;
 }
-dropdowns_content_container[0].insertAdjacentHTML('afterbegin', allNotifications);
+dropdown_container[0].insertAdjacentHTML('afterbegin', allNotifications);
