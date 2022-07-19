@@ -1,13 +1,15 @@
 let speakericon = document.querySelector(".microphone");
-let announcementli = document.querySelector(".announcement-noti");
+let announcementli = document.querySelector(".speaker-option");
 let announcement_container = [...document.querySelectorAll(".announcement--container")];
 let dropdowns_content_container = [...document.querySelectorAll(".announcement-content-container")]
 
 speakericon.addEventListener("mouseover", (e) => {
     announcement_container[1].classList.add("announcements--container--dropdown");
 });
-speakericon.addEventListener("mouseout", (e) => {
-    announcement_container[1].classList.remove("announcements--container--dropdown")
+document.addEventListener('click', (event) => {
+    if(!announcement_container[1].contains(event.target)){
+        announcement_container[1].classList.remove("announcements--container--dropdown");
+    }
 });
 const announcements = [
     `<div class="announcement-content">
@@ -16,14 +18,14 @@ const announcements = [
                 <span class="custom-color ">PA:</span>
                 Wilson Kumar
             </p>
-            <img src="./icons/checkbox_unchecked.svg" alt="check_circle">
+            <img src="./icons/check_circle.svg" alt="check_circle">
         </div>
         <div>
             No classes will be held on 21st Nov
         </div>
         <div class="custom-font-size ">
             <span class="custom-color custom-span">
-                <img src="./icons/checkbox_unchecked.svg" alt="attachments" class="attach-file">
+                <img src="./icons/attach_file.svg" alt="attachments" class="attach-file">
                 2 files attached
             </span>
             <span class="custom-color">
@@ -37,7 +39,7 @@ const announcements = [
                 <span class="custom-color ">PA:</span>
                 Samson White
             </p>
-            <img src="./icons/checkbox_unchecked.svg" alt="check_circle">
+            <img src="./icons/do_not_disturb.svg" alt="check_circle">
         </div>
     
         <div>
@@ -45,7 +47,7 @@ const announcements = [
         </div>
         <div class="custom-font-size ">
             <span class="custom-content custom-span">
-                <img src="./icons/checkbox_unchecked.svg" alt="attachments" class="attach-file">
+                <img src="./icons/attach_file.svg" alt="attachments" class="attach-file">
                 2 files attached
             </span>
             <span class="custom-content">
@@ -59,7 +61,7 @@ const announcements = [
                 <span class="custom-color ">PA:</span>
                 Wilson Kumar
             </p>
-            <img src="./icons/checkbox_unchecked.svg" alt="check_circle">
+            <img src="./icons/check_circle.svg" alt="check_circle">
         </div>
     
         <div>
@@ -72,7 +74,7 @@ const announcements = [
     
         <div class="custom-font-size ">
             <span class="custom-color custom-span">
-                <!-- <img src="./icons/checkbox_unchecked.svg" alt="attachments" class="attach-file">
+                <!-- <img src="./icons/attach_file.svg" alt="attachments" class="attach-file">
                 2 files attached -->
             </span>
             <span class="custom-color">
@@ -86,7 +88,7 @@ const announcements = [
                 <span class="custom-color ">PA:</span>
                 Wilson Kumar
             </p>
-            <img src="./icons/checkbox_unchecked.svg" alt="check_circle">
+            <img src="./icons/do_not_disturb.svg" alt="check_circle">
         </div>
     
         <div>
@@ -99,7 +101,7 @@ const announcements = [
     
         <div class="custom-font-size ">
             <span class="custom-color custom-span">
-                <!-- <img src="./icons/checkbox_unchecked.svg" alt="attachments" class="attach-file">
+                <!-- <img src="../svg/attach_file.svg" alt="attachments" class="attach-file">
                                         2 files attached -->
             </span>
             <span class="custom-color">
@@ -113,7 +115,7 @@ const announcements = [
                 <span class="custom-color ">PA:</span>
                 Wilson Kumar
             </p>
-            <img src="./icons/checkbox_unchecked.svg" alt="check_circle">
+            <img src="./icons/do_not_disturb.svg" alt="check_circle">
         </div>
         <div>
             Additional course materials avaialable on request
@@ -123,7 +125,7 @@ const announcements = [
         </div>
         <div class="custom-font-size ">
             <span class="custom-color custom-span">
-                <!-- <img src="./icons/checkbox_unchecked.svg" alt="attachments" class="attach-file">
+                <!-- <img src="../svg/attach_file.svg" alt="attachments" class="attach-file">
                                                                 2 files attached -->
             </span>
             <span class="custom-color">
@@ -147,14 +149,16 @@ let bellInList = document.querySelector(".bell-option");
 bellicon.addEventListener("mouseover", (e) => {
     announcement_container[0].classList.add("announcements--container--dropdown");
 });
-bellicon.addEventListener("mouseleave", (e)=> {
-    announcement_container[0].classList.remove("announcements--container--dropdown");
+document.addEventListener('click', (event) => {
+    if(!announcement_container[0].contains(event.target)){
+        announcement_container[0].classList.remove("announcements--container--dropdown");
+    }
 });
 const notifications = [
     `<div class= "announcement-content dnd-on" >
         <div >
             License for Introduction to Algebra has been assigned to your school
-            <img src = "./icons/checkbox_unchecked.svg" alt = "check_circle" >
+            <img src = "./icons/do_not_disturb.svg" alt = "check_circle" >
         </div>
         <div class= "custom-font-size" >
         </div>
@@ -166,7 +170,7 @@ const notifications = [
     `<div class= "announcement-content" >
         <div >
             Lesson 3 Practice Worksheet overdue for Amy Santiago
-            <img src = ""./icons/checkbox_unchecked.svg" alt = "check_circle" >
+            <img src = "./icons/check_circle.svg" alt = "check_circle" >
         </div>
         <div class= "custom-font-size" >
             Course: Advanced Mathematics
@@ -179,7 +183,7 @@ const notifications = [
     `<div class= "announcement-content dnd-on" >
         <div >
             23 students created
-            <img src = "./icons/checkbox_unchecked.svg" alt = "check_circle" >
+            <img src = "./icons/do_not_disturb.svg" alt = "check_circle" >
         </div>
         <div class= "custom-font-size" >
         </div>
@@ -191,7 +195,7 @@ const notifications = [
     `<div class= "announcement-content dnd-on" >
         <div >
             15 submissions ready for evaluation
-            <img src = "./icons/checkbox_unchecked.svg" alt = "check_circle" >
+            <img src = "./icons/do_not_disturb.svg" alt = "check_circle" >
         </div>
         <div class= "custom-font-size" >
             Course: Basics of Algebra
@@ -204,7 +208,7 @@ const notifications = [
     `<div class= "announcement-content dnd-on" >
         <div >
             License for Basic Concepts of Geometry has been assigned to your...
-            <img src = "./icons/checkbox_unchecked.svg" alt = "check_circle" >
+            <img src = "./icons/do_not_disturb.svg" alt = "check_circle" >
         </div>
         <div class= "custom-font-size" >
         </div>
@@ -216,7 +220,7 @@ const notifications = [
     `<div class= "announcement-content" >
         <div >
             Lesson 3 Practice Worksheet overdue for Sam Diego
-            <img src = "./icons/checkbox_unchecked.svg" alt = "check_circle" >
+            <img src = "./icons/check_circle.svg" alt = "check_circle" >
         </div>
         <div class= "custom-font-size" >
             Course: Advanced Mathematics
@@ -227,8 +231,8 @@ const notifications = [
         </div>
     </div>`
 ];
-if(notifications.lastElementChild){
-    notifications.lastElementChild.textContent = `${notifications.length}`;
+if(bellInList.lastElementChild){
+    bellInList.lastElementChild.textContent = `${notifications.length}`;
 }
 let allNotifications = "";
 for(let obj of notifications){
